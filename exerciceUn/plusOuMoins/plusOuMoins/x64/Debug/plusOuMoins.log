@@ -1,2 +1,3 @@
 ﻿  plusOuMoins.c
+C:\Users\arnau\Desktop\github\cLearning\exerciceUn\plusOuMoins\plusOuMoins\plusOuMoins.c(15,11): warning C4244: 'fonction' : conversion de 'time_t' en 'unsigned int', perte possible de données
   plusOuMoins.vcxproj -> C:\Users\arnau\Desktop\github\cLearning\exerciceUn\plusOuMoins\x64\Debug\plusOuMoins.exe
