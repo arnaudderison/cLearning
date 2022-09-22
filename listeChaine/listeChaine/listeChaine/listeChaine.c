@@ -77,7 +77,7 @@ void afficherListe(Liste* liste)
 
 	while (actuel != NULL)
 	{
-		printf("%d -> ", (*actuel).number);
+		printf("%d -> ", actuel->number);
 		actuel = actuel->suivant;
 	}
 	printf("NULL\n");
@@ -108,5 +108,36 @@ void delValeurListe(Liste *liste, int valeur) {
 		currentElement->suivant = nextNextCurrentElement;
 		free(nextCurrentElement);
 	}
+}
 
+void delListe(Liste* liste) {
+	if (liste == NULL) {
+		exit(EXIT_FAILURE);
+	}
+	Element* current = liste->premier;
+
+	if (current == NULL) {
+		exit(EXIT_FAILURE);
+	}
+
+	while (liste->premier != NULL) {
+		Element* aSupprimer = liste->premier;
+		liste->premier = aSupprimer->suivant;
+
+		free(aSupprimer);
+	}
+}
+int countListe(Liste* liste) {
+	int i = 0;
+	if (liste == NULL) {
+		exit(EXIT_FAILURE);
+	}
+
+	Element* current = liste->premier;
+
+	while (current != NULL) {
+		i++;
+		current = current->suivant;
+	}
+	return i;
 }

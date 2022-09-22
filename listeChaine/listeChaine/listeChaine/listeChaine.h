@@ -21,4 +21,6 @@ void insertionEnd(Liste* liste, int nvElement);
 void suppStart(Liste* liste);
 void afficherListe(Liste* liste);
 void delValeurListe(Liste* liste, int valeur);
+void delListe(Liste* liste);
+int countListe(Liste* liste);
 #endif

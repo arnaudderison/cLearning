@@ -13,10 +13,15 @@ int main()
     insertionStart(maListe, 15);
     insertionEnd(maListe, 13);
 
-    delValeurListe(maListe, 0);
-    //suppStart(maListe);
+    afficherListe(maListe);
+
+    //delListe(maListe);
+
+    suppStart(maListe);
 
     afficherListe(maListe);
+
+    printf( "%d", countListe(maListe));
 
     return 0;
 }
