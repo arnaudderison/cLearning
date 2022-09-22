@@ -11,6 +11,9 @@ int main()
     insertionStart(maListe, 4);
     insertionStart(maListe, 8);
     insertionStart(maListe, 15);
+    insertionEnd(maListe, 13);
+
+    delValeurListe(maListe, 0);
     //suppStart(maListe);
 
     afficherListe(maListe);

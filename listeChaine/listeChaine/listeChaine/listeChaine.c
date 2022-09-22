@@ -33,6 +33,26 @@ void insertionStart(Liste *liste, int nvElement) {
 	nouveau->suivant = liste->premier;
 	liste->premier = nouveau;
 }
+//insérer un element en fin de liste
+void insertionEnd(Liste *liste, int nvElement) {
+	/*Creation du nouvel élément*/
+	Element* nouveauAnd = malloc(sizeof(*nouveauAnd));
+
+	if (liste == NULL || nouveauAnd == NULL) {
+		exit(EXIT_FAILURE);
+	}
+
+	/*Creation de l'element courant*/
+	Element* currentElement = liste->premier;
+
+	while (currentElement->suivant != NULL) {
+		currentElement = currentElement->suivant;
+	}
+	/*insertion en fin de liste*/
+	nouveauAnd->number = nvElement;
+	nouveauAnd->suivant = NULL;
+	currentElement->suivant = nouveauAnd;
+}
 
 //Supprimer le premier élément de la liste
 void suppStart(Liste *liste) {
@@ -57,9 +77,36 @@ void afficherListe(Liste* liste)
 
 	while (actuel != NULL)
 	{
-		printf("%d -> ", actuel->number);
+		printf("%d -> ", (*actuel).number);
 		actuel = actuel->suivant;
 	}
 	printf("NULL\n");
 }
 
+void delValeurListe(Liste *liste, int valeur) {
+	if (liste == NULL) {
+		exit(EXIT_FAILURE);
+	}
+
+	/*Création de l'émément courant*/
+	Element* currentElement = liste->premier;
+	Element* nextCurrentElement = currentElement->suivant;
+	Element* nextNextCurrentElement = nextCurrentElement->suivant;
+
+	/*Pacourir la liste*/
+	while (nextCurrentElement->number != valeur && currentElement->suivant != NULL) {
+		currentElement = currentElement->suivant;
+		nextCurrentElement = currentElement->suivant;
+		nextNextCurrentElement = nextCurrentElement->suivant;
+	}
+
+	//modifier la liste
+	if (currentElement->suivant == NULL) {
+		exit(EXIT_FAILURE);
+	}
+	else {
+		currentElement->suivant = nextNextCurrentElement;
+		free(nextCurrentElement);
+	}
+
+}

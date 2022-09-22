@@ -17,6 +17,8 @@ struct Element
 
 Liste* initialisation();
 void insertionStart(Liste* liste, int nvElement);
+void insertionEnd(Liste* liste, int nvElement);
 void suppStart(Liste* liste);
 void afficherListe(Liste* liste);
+void delValeurListe(Liste* liste, int valeur);
 #endif

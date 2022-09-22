@@ -1,8 +1,2 @@
-﻿  listeChaine.c
-C:\Users\arnau\Desktop\github\cLearning\listeChaine\listeChaine\listeChaine\listeChaine.c(17,26): warning C4133: '=' : types incompatibles - de 'Element *' à 'Liste *'
-C:\Users\arnau\Desktop\github\cLearning\listeChaine\listeChaine\listeChaine\listeChaine.c(33,35): warning C4133: '=' : types incompatibles - de 'Liste *' à 'Element *'
-C:\Users\arnau\Desktop\github\cLearning\listeChaine\listeChaine\listeChaine\listeChaine.c(34,26): warning C4133: '=' : types incompatibles - de 'Element *' à 'Liste *'
-C:\Users\arnau\Desktop\github\cLearning\listeChaine\listeChaine\listeChaine\listeChaine.c(44,39): warning C4133: '=' : types incompatibles - de 'Element *' à 'Liste *'
-C:\Users\arnau\Desktop\github\cLearning\listeChaine\listeChaine\listeChaine\listeChaine.c(43,1): warning C4133: 'initialisation' : types incompatibles - de 'Liste *' à 'Element *'
-C:\Users\arnau\Desktop\github\cLearning\listeChaine\listeChaine\listeChaine\listeChaine.c(56,1): warning C4133: 'initialisation' : types incompatibles - de 'Liste *' à 'Element *'
+﻿  main.c
   listeChaine.vcxproj -> C:\Users\arnau\Desktop\github\cLearning\listeChaine\listeChaine\x64\Debug\listeChaine.exe
