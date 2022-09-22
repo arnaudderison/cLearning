@@ -3,6 +3,10 @@
 #include <stdio.h>
 #include <string.h>
 
+double lireDouble();
+int lire(char* chaine, int longueur);
+int viderBuffer();
+
 int main()
 {
     double poids;
@@ -10,7 +14,7 @@ int main()
     printf("Quel est votre poids ?");
     poids = lireDouble();
 
-    printf("Votre poids est  de %f Kg", poids);
+    printf("Votre poids est  de %lf Kg", poids);
     return 0;
 }
 
@@ -48,11 +52,12 @@ int viderBuffer()
     int c = 0;
     while (c != '\n' && c != EOF)
     {
-        return c = getchar();
+        c = getchar();
     }
 }
 
-int lireDouble()
+//double lireDouble()
+double lireDouble()
 {
     char nombreText[100]; //100 devrait suffir selon OpenClasroom
     
@@ -60,9 +65,11 @@ int lireDouble()
         //char* endptr;
         //lire le text sans "\n" et convertir en nombre
         //return strtol(nombreText, NULL, 10);
+
         return strtod(nombreText, NULL);
+        
     }
     else {
-        return 0;
+        return 0.0;
     }
 }
